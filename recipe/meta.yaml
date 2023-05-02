@@ -1,5 +1,5 @@
 {% set name = "linkify-it-py" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 476464480906bed8b2fa3813bf55566282e55214ad7e41b7d1c2b564666caf2f
+  sha256: 19f3060727842c254c808e99d465c80c49d2c7306788140987a1a7a29b0d6ad2
 
 build:
   number: 0
