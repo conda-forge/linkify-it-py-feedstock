@@ -25,7 +25,7 @@ requirements:
 
 test:
   imports:
-    - linkify_it_py
+    - linkify_it
   commands:
     - pip check
   requires:
