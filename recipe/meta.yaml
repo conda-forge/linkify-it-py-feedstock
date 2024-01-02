@@ -1,30 +1,35 @@
 {% set name = "linkify-it-py" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 476464480906bed8b2fa3813bf55566282e55214ad7e41b7d1c2b564666caf2f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/linkify-it-py-{{ version }}.tar.gz
+  sha256: 19f3060727842c254c808e99d465c80c49d2c7306788140987a1a7a29b0d6ad2
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
+    - python >=3.7
+    - setuptools
     - pip
-    - python >=3.6
   run:
-    - python >=3.6
-    - uc-micro-py >=1.0.1,<2.0.0
+    - python >=3.7
+    - uc-micro-py
 
 test:
   imports:
     - linkify_it
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/tsutsu3/linkify-it-py
