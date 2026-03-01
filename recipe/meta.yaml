@@ -1,18 +1,18 @@
 {% set name = "linkify-it-py" %}
-{% set version = "2.0.3" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/linkify-it-py-{{ version }}.tar.gz
-  sha256: 68cda27e162e9215c17d786649d1da0021a451bdc436ef9e0fa0ba5234b9b048
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 43360231720999c10e9328dc3691160e27a718e280673d444c38d7d3aaa3b98b
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
