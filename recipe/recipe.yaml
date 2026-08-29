@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: linkify-it-py
-  version: "2.1.1"
+  version: "2.2.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: a78f40fee177eb912e9d2375074108378523c38d3fde5d3ee804f465b6cfbfee
+  sha256: 907acd2d17ac1fbb9ddb62c8957ccbd6158cac602231a15c3b0cd1e215f03cee
 
 build:
   number: 0
